@@ -63,6 +63,10 @@ function appendItemToShoppingListEl(item) {
   newEl.textContent = itemValue;
 
   newEl.addEventListener("click", function () {
+    // Scroll to the top of the window
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+
     let deleteConfirmEl = document.createElement("p");
     let deleteItemEl = document.createElement("span");
     let deleteBtnEl = document.createElement("div");
